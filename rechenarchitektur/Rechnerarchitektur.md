@@ -486,9 +486,41 @@ TODO
 
 ![](media/Auswahl_071.png)
 
+* Aufteilung von 2 Nibbles a 4 Bit
+* Hinzu kommen 3 Bits für Hamming Code
+* Insgesamt 7 Bit für 4 Daten-Bits
+* Paralleles Schreiben der 7 Bit
+  * Festplatten müssen gut synchronisiert sein
 
 
+#### RAID-Level 3
+![](media/Auswahl_074.png)
+* Billige Version von RAID 2
+* Schlechte Fehlerkorrektur
+  * Mehr Platz für Nutzdaten
+  * 1 Parity Bit statt 3 Hamming-Code Bits
+  * Erkennen von Bit-Fehlern möglich
+  * Beheben jedoch nicht
+  * Bei Ausfall einer kompletten Festplatte können trotzdem ausgelesen werden
 
+
+#### RAID-Level 4
+![](media/Auswahl_075.png)
+
+* RAID 0 mit Parity Bit
+* Fehlererkennung und Behebung analog zu RAID 3
+  * Eine Platte darf ausfallen
+  * On-the-fly Austausch möglich
+* Parity-Platte ist der Flaschenhals
+  * Bei jedem Schreibzugriff wird auch auf die Parity-Platte geschrieben
+
+#### RAID-Level 5
+
+![](media/Auswahl_076.png)
+
+* Ähnlich wie RAID 4
+* Keine separate Parity-Platte sondern Verteilung auf alle Platten
+* Kein Flaschenhals-Effekt
 
 
 
