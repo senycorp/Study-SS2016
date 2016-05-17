@@ -1,5 +1,7 @@
 # Rechnerarchitektur
 
+[TOC]
+
 ## CPU-Architektur
 
 ![enter image description here](https://lh3.googleusercontent.com/-x8v91Phluzk/VzrYd25LuYI/AAAAAAAAPG4/dwTyuWRqV_Ugoqcp-dbtirY3YfpNVomCgCLcB/s0/Auswahl_048.png "Auswahl_048.png")
