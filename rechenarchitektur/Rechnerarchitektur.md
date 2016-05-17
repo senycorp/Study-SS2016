@@ -23,7 +23,7 @@
 
 ![enter image description here](https://lh3.googleusercontent.com/-YPiXVst01ZY/VzrZbRi2GEI/AAAAAAAAPHM/lcnjAhze9BE5eGgGImmx0ZMKWUtq4fGcQCLcB/s0/Auswahl_049.png "Auswahl_049.png")
 
-** Befehlsausführung wie folg:**
+** Befehlsausführung wie folgt:**
 
 1. Lesen der nächsten Anweisung in das IR
 2. PC erhöhen
@@ -276,6 +276,9 @@ TODO
   * Austausch von defekten Sektoren ohne OS-Unterstützung
 * LBA (Logical Block adressing)
    * 48 Bit für Blocknummer, 512 Byte pro Block
-   * 
+  
+### Interleaving bei Festplatten
+
+> Nötig, wenn Daten schneller am Lesekopf vorbeikommen, als sie von der Elektronik verarbeitet werden können.
 
 > Written with [StackEdit](https://stackedit.io/).
