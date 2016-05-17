@@ -281,4 +281,250 @@ TODO
 
 > Nötig, wenn Daten schneller am Lesekopf vorbeikommen, als sie von der Elektronik verarbeitet werden können.
 
+
+![](media/Auswahl_060.png)
+
+### Fehlerhafte Blöcke
+
+![](media/Auswahl_061.png)
+
+
+### Festplattenkapazität
+
+* 20 GB > Unformatiert 20*10^9 Byte
+* Low-Level-Formatierung
+  * Blöcke enthalten Präambel und ECC
+  * 2^34 = 17,2*10^9 Byte = 17,2 GB
+* 2er-Potenzrechnung des Betriebssystems
+  * 1GB sind 2^30 Byte und nicht 10^9
+  * 16 GB bleiben übrig
+* Dateisystem verbraucht weiteren Speicher (Verwaltungsdaten, Fragmentierung)
+
+### Kopfbewegung: Shortest Seek First
+
+![](media/Auswahl_062.png)
+
+* SSF ist nicht fair
+  * Sektoren in der Mitte werden bevorzugt
+  * Sektoren am Rand werden benachteiligt
+
+### Kopfbewegung: Aufzug-Algorithmus
+
+![](media/Auswahl_063.png)
+
+* Kopf bewegt sich so lange wie möglich in die gleiche Rechnung
+* Minimiert Kopfbewegung
+* Fairer Ansatz
+
+### Boot
+
+* Master-Boot-Record
+  * Erster Block der Fesplatte
+  * Enthält Boot-Loader-Code und Partitionstabelle
+
+![](media/Auswahl_064.png)
+
+### Partitionen
+
+* Primary (Logical)
+  * Typ gibt Aufschluss über das Dateisystem
+* Extended
+  * Enthält wiederum Partitionen
+
+### CD-ROM
+
+![](media/Auswahl_065.png)
+![](media/Auswahl_066.png)
+
+* Daten sind auf einer Spirale angeordnet
+* Unterteilung in Sektoren
+* Finden von Sektoren
+  * Ungefähre Berechnung
+  * Lesen bis zur nächsten Präambel
+* Zugriffszeiten sehr viel schlechter als bei Festplatten
+  * Dafür sequentielle Ablage der Dateien
+
+### CD-ROM Dateisystem
+
+* ISO 9660 Level 1
+  * MS-DOS kompatibel
+  * Dateinamen 8 + 3 (msdoof.exe) Zeichen
+  * Ordner max. 8 Zeichen
+* Rockridge Extensions
+  * Level 1 nicht für UNIX
+  * Längere Dateinamen
+  * Zugriffs- und Ausführungsrechte
+  * Benutzer- und Gruppen-ID
+  * Symbolic Links
+
+### CD-R
+
+* VTOC (Volume Table of Contents) am Anfang (Verzeichnis)
+* Unveränderbar nach dem Schreiben
+* Multi-Session CDs
+  * Meherere Spuren
+  * Jede Spur hat VTOC, der die vorderen VTOCs ersetzt
+  * Löschen / Hinzufügen von Daten möglich
+
+### CD-R Schreiben
+
+* Schreiben von CD-Rs auch aus physikalischen Gründen notwendig
+* OS muss Dateien schnell genug bereitstellen
+  * Ansonsten kommt es zum Abbruch
+* Lösung 
+  * Erstellung des CD-Images
+  * Pufferung, um Aussetzer von Festplatten vorzubeugen
+  * Kein Paging oder CPU-Entzug für CD-Schreibende Prozesse
+
+### DVD (Digital Video Disc)
+
+![](media/Auswahl_068.png)
+
+### RAID (Redundant Array of Independent Disks)
+
+* Zusammenschluss von mehreren Festplatten
+* Ziel
+  * Erhöhung der Datensicherheit (Redundanz)
+  * Steigerung der Transferrate (Performanz)
+  * Aufbau großer logischer Laufwerke
+  * Hot-Swap: Austausch von Festplatten on-the-fly
+  * Kostenreduktion durch kleinere und billigere Festplatten
+
+#### Hardware-RAID
+
+* RAID-Controller
+  * Übernimmt die komplette Arbeit
+  * Anschluss mehrerer Platten an den Controller (physische Sicht)
+  * Das OS sieht eine oder mehrere Platten (logische Sicht)
+  * Logische und physische Sicht sind unabhängig
+    * Bsp.: 4 physische billige Festplatten > 2 logische zuverlässige Platten
+
+#### Software-RAID
+
+* Controlling übernimmt OS
+  * OS sieht alle physischen Festplatten
+  * OS stellt logische Festplatten zu Verfügung
+* Anwendungen können zwischen software und hardware-RAIDs nicht unterscheiden
+* Preis / Leistung
+
+
+#### Software vs Hardware-RAID
+![](media/Auswahl_069.png)
+
+#### RAID-Levels
+
+* RAID 0: Striping
+* RAID 1: Mirroring
+* RAID 2: Hamming-Codes
+* RAID 3: RAID 2 mit Parität
+* RAID 4: Strping mit separater Parität
+* RAID 5: Performance + Parität
+* RAID 6: 2x Fehlerkorrekturinformationen
+
+#### Parity Bits
+
+* Single-Bit-Errors Erkennung
+* Count der 1-Bits ist gerade = 0er-Bit hinzufügen
+* Count der 1-Bits ist ungerade = 1er-Bit hinzufügen
+* Hamming-Distance: h = 2
+  * Kann 1er Single-Bit-Errors erkennen
+* Result: Count von 1er-Bits ist immer gerade
+* ERROR: Wenn Count der 1er-Bits ist nicht gerade
+
+#### Hamming Distance
+
+* Definition: Hamming Distance h
+  * Let ci and ck be any two code words
+  * Let x i,k = ci XOR ck
+  * h = the minimum of 1-bits in all xi,k
+* Informally spoken:
+  * The minimum number of different bits
+* To detect d bit errors
+  * h = d+1
+* To correct d bit errors
+  * h = 2d+1
+
+#### A [7,4] Hamming Code
+
+TODO
+
+#### RAID-Level 0 (Striping)
+
+![](media/Auswahl_070.png)
+
+* Daten werden zerlegt auf mehrere "Stripes"
+* Paralleles Lesen und Schreiben > Sehr schnell
+* Keine Redundanz > Ausfall bedeutet Datenverlust
+
+#### RAID-Level 1 (Mirroring)
+
+![](media/Auswahl_073.png)
+
+* Komplette Spiegelung der Daten
+* Kein Problem bei Ausfall einer Platte
+* Mirroring: Alle Platten an einem Controller
+* Duplexing: Alle Platten an verschiedenen Controllern
+* Mehrfache Redundanz
+* Lesen kann beschleunigt werden:
+  * Alle 4 Platten lesen einen anderen Block
+  * Alle 4 Platten lesen den gleichen Block und vergleichen diese (sicher)
+* Schreiben langsamer als RAID 0
+  * Alle 4 Platten schreiben dasselbe
+
+#### RAID-Leven 0+1 (Striping+Mirroring)
+![](media/Auswahl_072.png)
+* Alle Daten auf zwei Platten
+* Volle einmalige Spiegelung (Redundanz)
+* Lesen wird beschleunigt
+  * Alle 8 Platten lesen simultan
+  * Ggf. jeweils 2 dasselbe (schnell vs. sicher)
+  * Schreiben hat keine Beschleunigung zu RAID 0
+  * 8 Platten können parallel schreiben
+  * Aber 2 jeweils dasselbe
+
+#### RAID-Level 2
+
+![](media/Auswahl_071.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > Written with [StackEdit](https://stackedit.io/).
