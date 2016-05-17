@@ -1,3 +1,5 @@
-# My Awesome Book
+# Study SS2016
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This book contains study related summaries of all subjects, done excercises and other stuff. It will be extended and should serve as preparation for the exams in SS2016.
+
+Written by Selcuk Kekec
