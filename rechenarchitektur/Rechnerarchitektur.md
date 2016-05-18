@@ -1,6 +1,6 @@
 # Rechnerarchitektur
 
-[TOC]
+
 
 ## CPU-Architektur
 
