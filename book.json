@@ -1,7 +1,7 @@
 {
     "plugins": [
         "atoc",
-        "structured-toc",
+        "-structured-toc",
         "jsoneon",
         "-toc"
     ],
