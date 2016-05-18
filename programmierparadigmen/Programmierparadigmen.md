@@ -1,5 +1,7 @@
 # Programmierparadigmen
 
+<!-- toc -->
+
 ## Introduction
 
 ### Reasons for Studying Comcept of Programming Lanugages
