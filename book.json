@@ -3,7 +3,8 @@
         "atoc",
         "-structured-toc",
         "jsoneon",
-        "-toc"
+        "-toc",
+        "splitter"
     ],
     "pluginsConfig": {
         "atoc": {
