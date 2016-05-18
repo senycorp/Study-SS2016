@@ -6,6 +6,4 @@
 * [Programmierparadigmen](programmierparadigmen/Programmierparadigmen.md)
 * [Rechnerarchitektur](rechenarchitektur/Rechnerarchitektur.md)
 
-<!-- toc -->
-
 
