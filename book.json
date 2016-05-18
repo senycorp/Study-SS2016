@@ -4,7 +4,8 @@
         "-structured-toc",
         "jsoneon",
         "-toc",
-        "splitter"
+        "splitter",
+        "expandable-chapters"
     ],
     "pluginsConfig": {
         "atoc": {
