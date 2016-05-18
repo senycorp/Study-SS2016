@@ -1,7 +1,5 @@
 # Rechnerarchitektur
 
-<!-- toc -->
-
 
 ## CPU-Architektur
 
