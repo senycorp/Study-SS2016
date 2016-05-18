@@ -5,5 +5,10 @@
         "jsoneon",
         "toc"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+      "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        }
+    }
 }
