@@ -3,10 +3,10 @@
         "atoc",
         "structured-toc",
         "jsoneon",
-        "toc"
+        "-toc"
     ],
     "pluginsConfig": {
-      "atoc": {
+        "atoc": {
             "addClass": true,
             "className": "atoc"
         }
