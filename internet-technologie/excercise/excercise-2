@@ -1,0 +1,36 @@
+# IT&WE: Übung 2
+
+**Name**
+Selcuk kekec           
+
+**Matrikelnummer**
+3025670
+
+-------------------
+
+
+## Aufgabe 1
+
+## I
+
+Quoted-Printable ist ein Versuch, Zeichen, die ausserhalb der US-ASCII-Kodierung (> 7 Bit) liegen, darzustellen. Dabei werden jene Zeichen in ihre hexadezimale Repräsentation mit einem führenden "=" übersetzt. 
+
+> Unterschied: 
+> * Quoted-Printable: ist nach der Kodierung weitesgehend lesbar
+> * Quoted-Printable: Verwendung um E-Mail-Content zu kodieren
+> * Base64: übersetzt 8-Bit-Binärdaten in eine Zeichefolge bestehend aus lesbaren ASCII-Zeichen (A-Z, a-z, 0-9,+,/,=) 
+> * Base64: 3 Bytes werden in 4x6-Bits übersetzt
+> * Base64: Teil von MIME und wird zum Versenden von E-Mail-Anhängen verwendet
+> * Base64: Kodieren von Binärdaten
+
+> Vorteile:
+> * Quoted-Printable: Weitesgehend Lesbar
+> * 
+
+
+## II
+
+### Dekodierung "SVB2Ng==" = "IPv6"
+
+
+
