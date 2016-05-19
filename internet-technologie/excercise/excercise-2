@@ -27,6 +27,9 @@ Quoted-Printable ist ein Versuch, Zeichen, die ausserhalb der US-ASCII-Kodierung
 > * Quoted-Printable: Weitesgehend Lesbar
 > * 
 
+> Nachteile:
+> * Base64: Overhead
+
 
 ## II
 
@@ -49,8 +52,13 @@ Quoted-Printable ist ein Versuch, Zeichen, die ausserhalb der US-ASCII-Kodierung
 | Base64         	| U        	| 0        	| 1        	| U        	| U      	| A      	|   	|
 
 
+## III
 
+MIME ist eine Erweiterung des RFCs 822, welche eine Kompatibilität für zusätzliche Umlaute und Multimedia bietet. MIME definiert dazu lediglich die zu nutzenden Header und deren Bedeutung bei der Übermittlung von Daten. So kann über spezielle Header der Typ (**Content-Type**) des Inhalts der Nachricht, sowie die Kodierungsart (**Content-Transfer-Encoding**) angegeben werden. Diese Informationen helfen dem Empfänger die Daten richtig zu enkodieren und somit die ursprüngliche Nachricht wieder herzustellen. MIME ist somit lediglich der Umschlag für die übertragenen Daten. 
+Standardmäßig erfolgt die Kodierung von Nicht-7-Bit-ASCII-Zeichen mittel Quoted-Printable. Binärdaten hingegen werden über Base64 kodiert. Bei E-Mails ist zwingend eine Kodierung notwendig. HTTP erlaubt hingegen die direkte Übertragung von **binary**, wobei die Daten ohne Kodierung übertragen werden.
 
+MIME erlaubt zudem die Übertragung verschiedener Inhalte im gleichen Umschlag. Dazu definiert es den "Content-Type: multipart/mixed". Dabei werden die verschiedenen Inhalte über "--frontier"-Separatoren voneinander getrennt. Somit kann eine E-Mail mit Betreff und Inhalt und zusätzlich bspw. ein Anhang übermittelt werden.
 
+## IV
 
 
