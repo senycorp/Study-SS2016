@@ -30,3 +30,10 @@ int main(int argc, char* argv[]) {
 	return 0;
 }
 ```
+
+**Output**
+
+```bash
+ ~/tmp  gcc preprocessor.c && ./a.out
+MAX 6 / 12 : 11%  
+```
