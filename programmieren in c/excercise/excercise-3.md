@@ -35,6 +35,7 @@ int i = 'M';
 
 
 * For example: Addition of *int* and *float*
+* C does not check for compatibility of the given operands
 
 ```c
 #include <stdio.h>
