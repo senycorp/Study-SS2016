@@ -100,12 +100,31 @@ int i = a + b;
 int i = 5;
 ```
 
+## What is the scope of a variable? What are possible problems with variable scopes?
+
+* Default Scope is Block Scope
+* Variables defined outside a function are in FileScope and therefor globally accessible.
+* Scopes are cascading each other
+* Variables refer to the next near scope. A local variable will hide a global one which is named equal.
 
 
+## Name all possible variable scopes and their differences.
 
 
-
-
+* FileScope
+  * Defined outside of a function
+  * Accessible everywhere in application : **extern int a; // Load global variable into local file*
+* FunctionScope
+  * Can only be referenced inside defining function
+  * Usage for labels "case:"
+  * Not for variables et al.
+* BlockScope
+  * { BLOCK-START        BLOCK-END }
+  * Local variables and function parameters
+* Function-prototype Scope
+  * Parameter list of prototype
+  * Names of parameters in prototype are not considered by the compiler
+  * Prototype- and Implementation-Parameter namings can be different
 
 
 
