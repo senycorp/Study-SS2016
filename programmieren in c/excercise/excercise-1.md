@@ -21,13 +21,20 @@ A **Language Runtime** is the plattform on which programs written in these langu
 
 ## What are the differences between *HEAP* and a *Stack* in the memory managament of programs?
 
+[See here...](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap)
+
+
+
 * Stack
   * dynamic implicit Memory Management
     * local variables or function parameters (value types)
   * LIFO
+  * strongly managed
 * Heap
   * dynamic explicit Memory Management 
     * Class instances have to be created wit **new** before memory is allocated (reference data types)
+  * no enforced pattern to the allocation and deallocation of blocks from the heap
+  * Manual Managing (delete)
 
 
 
