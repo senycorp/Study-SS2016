@@ -12,3 +12,9 @@ The standard tooks this different types and their supported ranges only in relat
 * short min. 16bit
 * long min. 32bit
 * long long min. 64bit
+
+## Give 3 examples of integer data types that have a fixed size? In what standard were they introduced?
+
+* C99 Standard
+* defines optional fixed size integers
+* int8_t, uint16_t, int16_t (See here...)[http://en.cppreference.com/w/c/types/integer]
