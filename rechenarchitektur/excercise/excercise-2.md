@@ -1,6 +1,6 @@
 # Rechnerarchitektur: Übung 2
 -----------------------------
-> **!!! Diese Übung wurde nicht mit der Korrektur verglichen !!!**
+**!!! Diese Übung wurde nicht mit der Korrektur verglichen !!!**
 -----------------------------
 ## Aufgabe 1
 
