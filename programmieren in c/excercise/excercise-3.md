@@ -64,10 +64,41 @@ $ gcc preprocessor.c && ./a.out
 
 ```
 
+## What is the difference between declaration, definition and initialization of a variable?
+
+**Declaration:** Defines identifier and type. Value not given
+
+* Static name and type binding
+* Eases parsing
+
+```c
+
+int i;
+```
+
+**Definition:** Allocates memory for variable
+
+* Allocates memory
+* Looks exactly the same as abow
+* Declaring without defining via Linkage
+
+```c
+
+int i;
+```
 
 
+**Initialization:** Define, Declare and set initial value of variable
 
 
+```c
+// Not necessarily static
+
+int i = a + b;
+
+// But can...
+int i = 5;
+```
 
 
 
