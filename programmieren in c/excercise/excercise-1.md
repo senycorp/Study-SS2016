@@ -21,9 +21,8 @@ A **Language Runtime** is the plattform on which programs written in these langu
 
 ## What are the differences between *HEAP* and a *Stack* in the memory managament of programs?
 
-[See here...](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap)
-
-
+**[See here...](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap)**
+![](Auswahl_078.png)
 
 * Stack
   * dynamic implicit Memory Management
@@ -35,6 +34,10 @@ A **Language Runtime** is the plattform on which programs written in these langu
     * Class instances have to be created wit **new** before memory is allocated (reference data types)
   * no enforced pattern to the allocation and deallocation of blocks from the heap
   * Manual Managing (delete)
+
+## Why is memory management on the heap manual in C?
+
+The Heap is a larger memory section to fit dynamic sized data. The programer is responsible for allocation and deallocation of memory. Unnecessary data on the heap have to be freed by an explicit call of *free()*. Otherwise we will get a *memory leak*. An interesting detail about the heap is its scope. Stored data is automatically global and accessible everywhere. The main purpose of the heap is working with pointers.
 
 
 
