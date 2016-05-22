@@ -1,4 +1,4 @@
-# Programmierung in C / C++: Übung 3
+to# Programmierung in C / C++: Übung 3
 
 ## Data types and Variables
 
@@ -36,6 +36,7 @@ int i = 'M';
 
 * For example: Addition of *int* and *float*
 * C does not check for compatibility of the given operands
+* It tries to calculate a result
 
 ```c
 #include <stdio.h>
