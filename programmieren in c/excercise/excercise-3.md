@@ -1,9 +1,9 @@
-to# Programmierung in C / C++: Übung 3
+# Programmierung in C / C++: Übung 3
 
 ## Data types and Variables
-
+-----------------------
 ## What is the value range relationship between "char", "short", "int", "long" and "long long". What is defined about their type size/value range? What about unsigned types?
-
+-----------------------
 The standard tooks this different types and their supported ranges only in relationship and defines minimum boundaries.
 
 > sizeof(char) ≤ sizeof(short) ≤ sizeof(int) ≤ sizeof(long) ≤ sizeof(long long)
@@ -12,15 +12,15 @@ The standard tooks this different types and their supported ranges only in relat
 * short min. 16bit
 * long min. 32bit
 * long long min. 64bit
-
+-----------------------
 ## Give 3 examples of integer data types that have a fixed size? In what standard were they introduced?
-
+-----------------------
 * C99 Standard
 * defines optional fixed size integers
 * int8_t, uint16_t, int16_t [See here...](http://en.cppreference.com/w/c/types/integer)
-
+-----------------------
 ## What is the difference between the data type *char* in C and in Java
-
+-----------------------
 * Characters in C are simple integer constants
 * No unicode support in old *C*
 * Java has his own data type for characters
@@ -30,9 +30,9 @@ The standard tooks this different types and their supported ranges only in relat
 int i = 'M'; 
 ```
 
-
+-----------------------
 ## Why is C a weakly typed programming language? Provide an explanation
-
+-----------------------
 
 * For example: Addition of *int* and *float*
 * C does not check for compatibility of the given operands
@@ -64,8 +64,9 @@ $ gcc preprocessor.c && ./a.out
 
 ```
 
+-----------------------
 ## What is the difference between declaration, definition and initialization of a variable?
-
+-----------------------
 **Declaration:** Defines identifier and type. Value not given
 
 * Static name and type binding
@@ -100,16 +101,17 @@ int i = a + b;
 int i = 5;
 ```
 
+-----------------------
 ## What is the scope of a variable? What are possible problems with variable scopes?
-
+-----------------------
 * Default Scope is Block Scope
 * Variables defined outside a function are in FileScope and therefor globally accessible.
 * Scopes are cascading each other
 * Variables refer to the next near scope. A local variable will hide a global one which is named equal.
 
-
+-----------------------
 ## Name all possible variable scopes and their differences.
-
+-----------------------
 
 * FileScope
   * Defined outside of a function
