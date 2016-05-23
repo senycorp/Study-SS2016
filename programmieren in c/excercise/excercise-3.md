@@ -94,7 +94,6 @@ int i;
 
 ```c
 // Not necessarily static
-
 int i = a + b;
 
 // But can...
