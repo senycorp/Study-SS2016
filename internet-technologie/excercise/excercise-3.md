@@ -52,7 +52,24 @@ Mittels dieser Werte wird die Wahrscheinlichkeit berechnet, dass eine Nachricht 
 
 Moderne Spam-Filter können vom Benutzer weiter verfeinert werden. Sobald eine Nachricht vom Nutzer explizit als Spam markiert wird, untersucht der Spam-Filter diese Nachricht und lernt von der Aktion des Nutzers. Den Wörtern dieser Nachricht wird eine höhere Spam-Wahrscheinlichkeit zugeordnet.
 
+## Aufgabe 2
 
+### I Was ist SpamAssassin und wie funktioniert es?
+
+**SpamAssassin** ist ein Programm, dass unerwünschte Spam-Nachrichten auf Grundlage verschiedener Mechanismen auswertet und einen Score ausrechnet, der die Spam-Wahrscheinlichkeit wiederspiegeln soll.
+
+Dabei kommen verschiedene Techniken zum Einsatz:
+
+* Statische Regeln: Reguläre Ausdrücke von spam-typischen Wort-Sequenzen
+* RBLs (Realtime Blackhole Lists): Listen von Servern, welche bekanntlich Spam versenden
+
+### II Welche Filter unterstützt SpamAssassin und was bewirken sie?
+
+### III Was ist mit Tarpit und Greylisting gemeint? Was sind seine Vor- und Nachteile?
+
+### IV Welche Möglichkeiten gibt es Clients vor dem E-Mail Versand via SMTP zu authentifizieren? Welches Verfahren hat sich durchgesetzt?
+
+### V Was sind DKIM und SPF? Wie können sie helfen Spam zu vermeiden? Vergleichen sie beide Ansätze!
 
 
 
