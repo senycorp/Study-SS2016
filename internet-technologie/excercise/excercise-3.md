@@ -12,9 +12,13 @@ Selcuk kekec
 
 ### I Wieso und von wem wird Spam versendet?
 
+> Quellen: Folien und [Wikipedia](https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiF5Z-mpvLMAhUHWSwKHdiNAH0QFggcMAA&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FSpam&usg=AFQjCNEFbaPOUty9F1yv0VQ7FIihZKfXOQ&sig2=TJBXkaTsKfo_dPwqYuQplg&bvm=bv.122852650,d.bGg)
+
 Spam wird oft zu kommerziellen Zwecken eingesetzt und kann auf verschiedenste Arten auftreten (E-Mail, Blogeinträge, Wikis, SMS, InstantMessenger,...). Oft enthalten Spam-Nachrichten Verweise auf Dienstleistungen und Produkte bestimmter Hersteller. Es gibt aber auch Vorkommen von Scam, bei dem der Empfänger mit trickreichen Mitteln *betrogen* wird. Spam ist also keinesfalls positiv, sondern eine agressive Angebots- und Betrugsmasche. Die Sender von Spam-Nachrichten sind oft Betreiber, Sub-Betreiber von Online-Shops, die Spam als Werbemittel ansehen. Da die Anzahl offener Mail-Relays stark abgenommen hat wird es immer schwieriger Spam-Mails zu versenden. Deshalb weichen die Versender von Spam-Nachrichten, die im Auftrag von anderen handeln, auf Bot-Netze aus. 
 
 ### II Wie kommen Spamversender an die E-Mail Adressen der Empfänger?
+
+> Quellen: Folien und [Wikipedia](https://de.wikipedia.org/wiki/Spam)
 
 Die E-Mail-Adressen der Empfänger werden über Web-Crawler gesammelt. Dazu werden verschiedenste Quellen angezapft: USENET, WHOIS, RANDOM DOMAIN NAMES, DISCUSSION BOARDS,...
 
@@ -27,9 +31,13 @@ Es gibt verschiedenste Möglichkeiten die eigene E-Mail-Adresse davor zu schütz
 
 ### III Was ist ein *Open Relay*? Wieso sollte man keines betreiben?
 
+> Quellen: Folien und [Wikipedia](https://de.wikipedia.org/wiki/SMTP-Relay-Server)
+
 SMTP-Relay-Server sind Dienste, die eine E-Mail annimmt und an die adressierten **Empfänger** weiterleitet. Die Angabe von mehreren Empfängern bewirkt also, dass die Nachricht mehrmals generiert und versendet wird. Ein schlecht konfigurierter SMTP-Relay wird hierbei als *Open Relay* bezeichnet. Diese Relays führen keinerlei Prüfung über Zuständigkeiten durch und ist ein perfektes Werkzeug für Spam-Emails. Es können sehr einfach massenhaft generierte E-Mails verschickt werden.
 
 ### IV Was bezeichnet man als *Backscatter*? Wie kann *Backscatter* vermieden werden?
+
+> Quellen: Folien und [Wikipedia](https://de.wikipedia.org/wiki/Backscatter_(E-Mail))
 
 Backscatter sind *Delivery Status Notifications*, welche an den vermeindlichen Absender einer E-Mail gesendet werden. Da Spam-Nachrichten niemals den waren Absender angeben, wird somit ein eigentlich Unbeteiligter über den bestimmten Status seiner vermeintlichen Nachricht benachrichtigt.
 
@@ -38,6 +46,8 @@ Das Unterbinden von Backscatter erfolgt zum einen über die Restriktion, dass De
 Eine andere Möglichkeit bietet sich an, wenn der MTA über die Adressen seiner Domain informiert ist und mit einem Virenscanner und einem Spamfilter zusammenarbeitet kann. Auf diesem Weg kann Backscatter an nicht real existierende Adressen vermieden werden.
 
 ### V Wie funktionieren *Bayessche Filter*? Wie können sie automatisch lernen?
+
+> Quellen: Folien und [Wikipedia](https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering)
 
 Bayessche Filter funktionieren auf Grundlage von Statistiken, die jedem Word eine Wahrscheinlichkeit der Verwendung in Spam- und Ham-Nachrichten zuordnen. Die Formel arbeitet dabei auf Basis von verschiedenen Wahrscheinlichkeiten:
 
@@ -56,6 +66,8 @@ Moderne Spam-Filter können vom Benutzer weiter verfeinert werden. Sobald eine N
 
 ### I Was ist SpamAssassin und wie funktioniert es?
 
+> Quellen: Folien und [Wikipedia](https://de.wikipedia.org/wiki/SpamAssassin)
+
 **SpamAssassin** ist ein Programm, dass unerwünschte Spam-Nachrichten auf Grundlage verschiedener Mechanismen auswertet und einen Score ausrechnet, der die Spam-Wahrscheinlichkeit wiederspiegeln soll.
 
 Auf Grundlage von definierten Grenzwerten im Bezug auf den Score kann SpamAssassin definierte Aktionen ausführen:
@@ -66,6 +78,8 @@ Auf Grundlage von definierten Grenzwerten im Bezug auf den Score kann SpamAssass
 * Fallback: greylisting, challange/response, teergrube
 * 
 ### II Welche Filter unterstützt SpamAssassin und was bewirken sie?
+
+> > Quellen: Folien und [Wikipedia](https://de.wikipedia.org/wiki/SpamAssassin)
 
 Dabei kommen verschiedene Techniken zum Einsatz:
 
@@ -78,6 +92,8 @@ Dabei kommen verschiedene Techniken zum Einsatz:
 * Bayessche Filter
 
 ### III Was ist mit Tarpit und Greylisting gemeint? Was sind seine Vor- und Nachteile?
+
+> Quellen: Folien und [Wikipedia](https://en.wikipedia.org/wiki/Greylisting)
 
 Tarpit (Teergrube) ist ein Verfahren, bei dem unerwünschte und verdächtige Netzwerkverbindungen künstlich verlangsamt werden, um eine lange Blockierung des Verbindungspartners zu erreichen. Durch das langsame Antworten ist der Client damit beschäftigt auf sehr träge ankommende Antworten des Servers zu warten.
 
@@ -108,6 +124,8 @@ die Nachricht annimmt oder ablehnt. Beim erstmaligen Auftreten dieser Kombinatio
 
 ### IV Welche Möglichkeiten gibt es Clients vor dem E-Mail Versand via SMTP zu authentifizieren? Welches Verfahren hat sich durchgesetzt?
 
+> Quellen: Folien und [Wikipedia](https://de.wikipedia.org/wiki/SMTP-Auth)
+
 * Überprüfung der Adresse: Spoofing-Gefahr
 * IP-Adresse
   * Nur möglich für geschlossene Gruppen mit festen IPs
@@ -125,6 +143,8 @@ die Nachricht annimmt oder ablehnt. Beim erstmaligen Auftreten dieser Kombinatio
     * Server tut das selbe mit dem bekannten Password für den Benutzer und vergleicht den Response des Clients
 
 ### V Was sind DKIM und SPF? Wie können sie helfen Spam zu vermeiden? Vergleichen sie beide Ansätze!
+
+> Quellen: Folien und Wikipedia
 
 **DKIM:**
 
